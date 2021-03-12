@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:background="@color/backgroundColor"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="140dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="1dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/my_fields_fragment_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/greenPrimary"
+                    android:src="@drawable/placeholder_image"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/my_fields_fragment_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/fields_name"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="18sp"
+                android:textColor="@color/blackColor2"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/usual_text"
+                    android:text="@string/status"/>
+
+                <TextView
+                    android:id="@+id/my_fields_fragment_text_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/usual_text"
+                    android:text="@string/did_not_defined"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_fields_fragment_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/usual_text"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:textStyle="italic"
+                android:text="@string/edit"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/my_fields_fragment_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/usual_text"
+                android:layout_marginTop="10dp"
+                android:textStyle="italic"
+                android:clickable="true"
+                android:text="@string/delete"
+                android:focusable="true"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

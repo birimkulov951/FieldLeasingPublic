@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.main.FilterSettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/filter_settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/whiteToolbarAndCardViewColor"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/filter_settings_fragment_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/filter"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="24sp"
+                android:textColor="@color/greenPrimary"/>
+
+            <TextView
+                android:id="@+id/filter_settings_fragment_reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp"
+                android:text="@string/reset"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                android:textColor="@color/blackColor2"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/filter_settings_scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filter_settings_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/field_type" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_settings_fragment_field_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/filter_settings_fragment_field_type_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_stroke_grey" />
+
+                    <TextView
+                        android:id="@+id/filter_settings_fragment_field_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/field_type"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/blackColor2"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/filter_settings_fragment_field_type_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/price" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/filter_settings_fragment_start_price"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/from"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <EditText
+                    android:id="@+id/filter_settings_fragment_end_price"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/till"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_countPlayers"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/players_quantity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/filter_settings_fragment_min_player_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/from"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/filter_settings_fragment_max_player_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/till"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_hours"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/desired_date" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_settings_fragment_desired_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/filter_settings_fragment_desired_date_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_stroke_grey" />
+
+                    <TextView
+                        android:id="@+id/filter_settings_fragment_desired_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/select_date"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/blackColor2"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/filter_settings_fragment_desired_date_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/desired_time" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/filter_settings_fragment_desired_time_from"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center_vertical"
+                    android:hint="@string/from"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/filter_settings_fragment_desired_time_until"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center_vertical"
+                    android:hint="@string/till"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/rating" />
+
+            <RadioGroup
+                android:id="@+id/filter_settings_fragment_rating_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/filter_settings_fragment_most_popular_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/most_popular"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/filter_settings_fragment_best_feedback_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/best_feedback"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_parking_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/parking_is_available" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/is_indoor" />
+
+            <RadioGroup
+                android:id="@+id/filter_settings_fragment_indoor_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/filter_settings_fragment_is_indoor_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/yes_2"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/filter_settings_fragment_is_indoor_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/no"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/has_equipment" />
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_showers_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_showers" />
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_locker_rooms_has_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_locker_rooms" />
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_lights_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_lights" />
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_rostrum_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_rostrum" />
+
+            <CheckBox
+                android:id="@+id/filter_settings_fragment_equipment_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_equipment" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="110dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/filter_settings_fragment_save_button"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_button"
+            android:text="@string/apply"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

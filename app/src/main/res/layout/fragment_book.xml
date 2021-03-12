@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.main.BookingFragment"
+    android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:elevation="3dp"
+            android:background="@color/whiteToolbarAndCardViewColor">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize">
+                <ImageView
+                    android:id="@+id/booking_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_back"
+                    android:paddingEnd="10dp"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_book"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/greenPrimary"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/name"
+                android:textColor="@color/blackColor2"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="6dp">
+
+                <EditText
+                    android:id="@+id/booking_edit_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name"
+                    android:padding="15dp"
+                    android:nextFocusDown="@id/booking_edit_text_number"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/background_stroke_grey"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/phone_number"
+                android:textColor="@color/blackColor2"
+                android:textSize="16sp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="6dp">
+                <EditText
+                    android:id="@+id/booking_edit_text_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="+996"
+                    android:padding="15dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/booking_choose_date_card"
+                    android:inputType="phone"
+                    android:textSize="16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/date"
+                android:textColor="@color/blackColor2"
+                android:textSize="16sp" />
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/booking_choose_date_card"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/booking_date_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_stroke_grey">
+
+        <TextView
+            android:id="@+id/booking_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:hint="Выберите дату"
+            android:nextFocusDown="@id/booking_time_from"
+            android:textColor="@color/blackColor2"
+            android:spinnerMode="dropdown"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/desired_time"
+                android:textSize="16sp"
+                android:textColor="@color/blackColor2"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+                <RelativeLayout
+                    android:id="@+id/booking_time_from_frame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/background_stroke_grey">
+
+                    <TextView
+                        android:id="@+id/booking_time_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/from"
+                        android:nextFocusRight="@string/desired_time_until"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_marginEnd="20dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/booking_time_to_frame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey">
+                    <TextView
+                        android:id="@+id/booking_time_until"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="До"
+                        android:textSize="16sp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_centerVertical="true" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_marginEnd="20dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+                <Button
+                    android:id="@+id/booking_btn_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/background_rectangle_grey"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="@string/to_book"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

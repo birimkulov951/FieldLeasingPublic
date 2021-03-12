@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_gravity="center_horizontal"
+    android:padding="5dp"
+    android:background="@color/backgroundColor"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/custom_dialog_4_alert_title"
+            android:paddingTop="20dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/need_to_login"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/blackColor2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/custom_dialog_4_ok_button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/whiteToolbarAndCardViewColor"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/background_stroke_green"
+            android:backgroundTint="@color/greenPrimary" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

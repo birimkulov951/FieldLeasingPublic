@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/personal_info"
+            android:title="@string/personal_info">
+        </item>
+        <item
+            android:id="@+id/history"
+            android:title="@string/history_booking">
+        </item>
+        <item
+        android:id="@+id/requests"
+        android:title="@string/requests">
+        </item>
+        <item android:id="@+id/my_playgrounds"
+            android:title="@string/my_fields">
+
+        </item>
+        <item
+            android:id="@+id/add_playground"
+            android:title="@string/add_stadium">
+        </item>
+        <item android:id="@+id/blacklist"
+            android:title="@string/blacklist">
+        </item>
+        <item
+            android:id="@+id/exit_owner_profile"
+            android:title="@string/exit">
+        </item>
+
+
+    </group>
+
+</menu>

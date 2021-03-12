@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.main.profile.AddFieldFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/whiteToolbarAndCardViewColor"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/add_field_fragment_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="@string/add_stadium"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="24sp"
+            android:textColor="@color/greenPrimary"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16sp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/name_2" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autofillHints="@string/name_2"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/name_2"
+                android:inputType="textCapSentences|text"
+                android:maxLines="3" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/field_type" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_1_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_stroke_grey"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/add_field_fragment_card_view_1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/field_type"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/blackColor2"
+                        android:textSize="16sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_1_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/description" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="12dp"
+                android:autofillHints="@string/description"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/description"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:maxLines="15"
+                android:minHeight="10dp" />
+
+            <!--Hidden cardView for photo-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_photo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_1_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:background="@color/greenPrimary"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_image"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_1_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_red_exit"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Hidden cardView for photo-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_photo_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_3_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:background="@color/greenPrimary"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_image"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_3_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_red_exit"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Hidden cardView for photo-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_photo_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_4_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:background="@color/greenPrimary"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_image"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_4_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_red_exit"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Hidden cardView for photo-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_photo_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_5_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:background="@color/greenPrimary"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_image"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_5_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_red_exit"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Hidden cardView for photo-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_photo_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_6_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:background="@color/greenPrimary"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_image"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/add_field_fragment_card_view_photo_6_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_red_exit"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_field_fragment_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/add_field_fragment_card_view_2_text"
+                        style="@style/button_style_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/add_photo"
+                        android:textSize="16sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/background_stroke_green"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_icon_attach_file"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/address" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autofillHints="@string/address"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/address"
+                android:inputType="textCapSentences|text"
+                android:maxLength="150"
+                android:maxLines="3" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/working_days" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_monday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/monday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_monday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_monday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_tuesday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/tuesday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_tuesday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_tuesday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_wednesday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/wednesday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_wednesday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_wednesday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_thursday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/thursday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_thursday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_thursday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_friday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/friday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_friday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_friday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_saturday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/saturday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_saturday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_saturday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_field_fragment_text_sunday"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/sunday" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_sunday_start"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_08_00" />
+
+                <TextView
+                    android:id="@+id/add_field_fragment_spinner_sunday_end"
+                    style="@style/usual_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:gravity="center"
+                    android:text="@string/_23_00" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/max_players" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_max_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autofillHints="@string/players_quantity"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/players_quantity"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/area_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/add_field_fragment_edit_text_field_width"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/width"
+                    android:importantForAutofill="no"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/add_field_fragment_edit_text_field_length"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_grey"
+                    android:hint="@string/length"
+                    android:importantForAutofill="no"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/phone_number" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autofillHints="@string/_996500505050"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/_996500505050"
+                android:inputType="phone" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/price" />
+
+            <EditText
+                android:id="@+id/add_field_fragment_edit_text_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/background_stroke_grey"
+                android:hint="@string/som_currency"
+                android:inputType="phone" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/parking" />
+
+            <RadioGroup
+                android:id="@+id/add_field_fragment_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/add_field_fragment_radio_button_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/add_field_fragment_radio_button_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:checked="true"
+                    android:text="@string/no" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/is_indoor" />
+
+            <RadioGroup
+                android:id="@+id/add_field_fragment_radio_group_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/add_field_fragment_radio_button_yes_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/yes_2"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/add_field_fragment_radio_button_no_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenPrimary"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/no"
+                    android:textColor="@color/blackColor2"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/equipments" />
+
+            <CheckBox
+                android:id="@+id/add_field_fragment_showers_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_showers" />
+
+            <CheckBox
+                android:id="@+id/add_field_fragment_locker_rooms_has_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_locker_rooms" />
+
+            <CheckBox
+                android:id="@+id/add_field_fragment_lights_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_lights" />
+
+            <CheckBox
+                android:id="@+id/add_field_fragment_rostrum_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_rostrum" />
+
+            <CheckBox
+                android:id="@+id/add_field_fragment_equipment_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/has_equipment" />
+
+            <TextView
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/book_opportunity" />
+            <CheckBox
+                android:id="@+id/add_field_fragment_disable_booking_field_check_box"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "12dp"
+                android:buttonTint="@color/greenPrimary"
+                android:text="@string/disable_booking" />
+
+
+            <!--Buttons-->
+            <LinearLayout
+                android:id="@+id/add_field_fragment_if_add_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_field_fragment_button_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_green"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/greenPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="ButtonStyle" />
+
+
+                <Button
+                    android:id="@+id/add_field_fragment_button_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_rectangle_grey"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"
+                    android:textSize="16sp"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_field_fragment_if_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+              <!--  <CheckBox
+                    android:id="@+id/add_field_fragment_hide_field_check_box"
+                    style="@style/usual_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:buttonTint="@color/greenPrimary"
+                    android:text="@string/hide_fragment" />-->
+
+                <Button
+                    android:id="@+id/add_field_fragment_button_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/background_rectangle_green"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"
+                    android:textSize="16sp"
+                    tools:ignore="ButtonStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+
+                    <TextView
+                        android:id="@+id/add_field_fragment_button_delete_field"
+                        style="@style/usual_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="@string/delete"
+                        android:textStyle="italic" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

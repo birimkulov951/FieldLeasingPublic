@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/backgroundColor"
+    app:cardPreventCornerOverlap="true">
+
+<LinearLayout
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/alert_title"
+            android:paddingTop="20dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_popup"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/blackColor2"
+            android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/book_alert_btn_ok"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_stroke_green"
+                    android:backgroundTint="@color/greenPrimary" />
+
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    app:cardCornerRadius="3dp"
+    android:background="@color/whiteToolbarAndCardViewColor"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:maxHeight="180dp"
+            android:minHeight="170dp"
+            android:layout_margin="9dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/fields_fragment_stadium_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/placeholder_image"
+                    android:background="@color/greenPrimary"
+                    android:scaleType="centerCrop"/>
+
+
+                <TextView
+                    android:id="@+id/fields_fragment_stadium_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/fields_fragment_stadium_address"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/did_not_defined"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowColor="@color/blackColor1"
+                    android:shadowRadius="2"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"/>
+
+                <TextView
+                    android:id="@+id/fields_fragment_stadium_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/did_not_defined"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowColor="#7F000000"
+                    android:shadowRadius="2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="13sp"
+                    android:textColor="@color/whiteToolbarAndCardViewColor"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:id="@+id/ic_money_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_money"/>
+
+            <TextView
+                android:id="@+id/fields_fragment_stadium_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ic_money_news"
+                android:layout_marginStart="13dp"
+                android:layout_centerVertical="true"
+                android:hint="XX"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/blackColor2"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/currency_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/fields_fragment_stadium_price"
+                android:layout_centerVertical="true"
+                android:text="@string/som_currency"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/blackColor2"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/fields_fragment_stadium_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="@color/yellowColor"
+                android:secondaryProgressTint="@color/yellowColor"
+                android:numStars="5"
+                android:rating="1.2"
+                android:stepSize="0.1"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fields_fragment_stadium_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/did_not_defined"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/blackColor2"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

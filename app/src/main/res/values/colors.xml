@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="greenPrimary">#0D8549</color>
+    <color name="blackPrimaryDark2">#0D8549</color>
+    <color name="accentColor">#0D8549</color>
+
+    <color name="darkGreyColor">#50555C</color>
+    <color name="yellowColor">#FFC329</color>
+
+    <color name="greyColor">#C4C4C4</color>
+
+    <color name="backgroundColor">#FFFFFFFF</color>
+    <color name="whiteToolbarAndCardViewColor">#FFFFFFFF</color>
+
+    <color name="redColor">#FF0000</color>
+
+    <color name="blackColor1">#000000</color>
+    <color name="blackColor2">#292929</color>
+
+
+</resources>

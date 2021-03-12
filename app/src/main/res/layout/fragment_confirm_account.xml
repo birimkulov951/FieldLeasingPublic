@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.authorization.register.ConfirmAccountFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/whiteToolbarAndCardViewColor"
+        android:elevation="3dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="@string/pole_kg"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="24sp"
+            android:textColor="@color/greenPrimary"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt_header"
+        style="@style/the_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подтверждение аккаунта"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <LinearLayout
+        android:id="@+id/confirmation_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_header"
+        app:layout_constraintVertical_bias="0.033"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:id="@+id/txt_messageOne"
+            style="@style/txt_headers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:ellipsize="end"
+            android:text="@string/txt_message"
+            android:textAlignment="center" />
+
+
+        <EditText
+            android:id="@+id/edit_inputCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_messageOne"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/background_stroke_grey"
+            android:hint="XXXXX"
+            android:maxLength="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_messageOne"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/tv_invalid_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:textColor="@color/redColor"
+            android:text="@string/invalid_code"
+            android:visibility="gone"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_inputCode"
+            app:layout_constraintVertical_bias="0.013"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btn_confirmCode"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_inputCode"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_button"
+            android:text="Подтвердить"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_inputCode"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <Button
+            android:id="@+id/btn_sendCodeAgain"
+            style="@style/button_style_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_confirmCode"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/background_stroke_green"
+            android:text="Отправить код еще раз"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_confirmCode"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_goToMain"-->
+<!--        style="@style/usual_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:text="@string/txt_bottomText"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/confirmation_linear_layout"-->
+<!--        app:layout_constraintVertical_bias="1.0" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,199 @@
+<resources>
+
+    <string name="app_name">Pole.kg</string>
+
+    <!--Home and News fragment -->
+    <string name="som_currency">\u00A0сом / час</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_bottomText"><u>Вернуться на главную</u></string>
+    <string name="error_message_password">Пароли не совпадают</string>
+    <string name="error_message_one">Пользователь с таким номера телефона уже существует</string>
+    <string name="message_inputPhone">Введите номер телефона, и мы вышлем на него код подтверждения</string>
+    <string name="message_2">Введите код из СМС, которое мы отправили на ваш номер</string>
+    <string name="message_3">Введите код из СМС, которое мы прислали на ваш номер телефона</string>
+    <string name="news_title">В Бишкеке прошел такой-то матч между этими и вон теми за забором</string>
+    <string name="text_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisi tellus, eleifend nec malesuada eu, volutpat vel magna. Quisque molestie, arcu id auctor commodo, tellus lacus facilisis elit, vel gravida augue nisi et nisl. Fusce et lobortis erat. Fusce sodales, lacus in hendrerit eleifend, nibh massa placerat enim, ut ultrices nisi augue ut dolor.</string>
+    <string name="txt_regForUser">Для поиска и бронирования спортивных площадок:</string>
+    <string name="txt_regForOwner">Для размещения своих собственных спортивных площадок:</string>
+    <string name="txt_message">На указанный номер был отправлен код подтверждения</string>
+    <string name="fields">Площадки</string>
+    <string name="news">Новости</string>
+    <string name="no_internet">Нет интернета!</string>
+    <string name="message_nothing_found">По вашему запросу ничего не найдено.</string>
+    <string name="message_news_not_found">Новости скоро будут добавлены.</string>
+    <string name="message_fields_nothing_found">Площадки скоро будут добавлены.</string>
+    <string name="message_date">Пожалуйста, укажите дату!</string>
+    <string name="message_time">Пожалуйста, укажите время!</string>
+    <string name="monday1">Понедельник</string>
+    <string name="tuesday1">Вторник</string>
+    <string name="wednesday1">Среда</string>
+    <string name="thursday1">Четверг</string>
+    <string name="friday1">Пятница</string>
+    <string name="saturday1">Суббота</string>
+    <string name="sunday1">Воскресенье</string>
+
+    <!--Filter Settings fragment -->
+    <string name="filter">Фильтр</string>
+    <string name="reset">Сбросить</string>
+    <string name="field_type">Тип площадки</string>
+
+    <string name="price">Цена</string>
+    <string name="players_quantity">Количество игроков</string>
+    <string name="free_time">Свободное время</string>
+    <string name="rating">Рейтинг</string>
+    <string name="most_popular">Самые популярные</string>
+    <string name="best_feedback">Лучшие по отзывам</string>
+    <string name="apply">Применить</string>
+    <string name="parking">Парковка</string>
+    <string name="yes">Есть</string>
+    <string name="no">Нет</string>
+    <string name="date_is_wrong">Не правильная дата</string>
+
+    <!--Add / Edit Field fragment -->
+    <string name="add_stadium">Добавить площадку</string>
+    <string name="edit_stadium">Редактировать площадку</string>
+    <string name="name_2">Название</string>
+    <string name="description">Описание</string>
+    <string name="add_photo">Добавить фото</string>
+    <string name="address">Адрес</string>
+    <string name="working_days">Рабочие дни</string>
+    <string name="monday">ПН</string>
+    <string name="tuesday">ВТ</string>
+    <string name="wednesday">СР</string>
+    <string name="thursday">ЧТ</string>
+    <string name="friday">ПТ</string>
+    <string name="saturday">СБ</string>
+    <string name="sunday">ВС</string>
+    <string name="max_players">Максимальное количество игроков</string>
+    <string name="area_size">Размеры поля</string>
+    <string name="width">Ширина (м)</string>
+    <string name="length">Длина (м)</string>
+    <string name="add">Добавить</string>
+    <string name="_996500505050">+996500XXXXXX</string>
+    <string name="sure_to_cancel">Вы действительно хотите отменить?</string>
+    <string name="input_any_day">Пожалуйста, укажите рабочие дни!</string>
+    <string name="yes_2">Да</string>
+    <string name="equipments">Оснащенность</string>
+    <string name="loading">Загрузка…</string>
+    <string name="has_parking">Парковка</string>
+    <string name="is_indoor">Крытое поле</string>
+    <string name="has_showers">Душевые кабинки</string>
+    <string name="has_locker_rooms">Раздевалки</string>
+    <string name="has_lights">Освещение</string>
+    <string name="has_rostrum">Трибуны</string>
+    <string name="has_equipment">Инвентарь</string>
+    <string name="delete_field">Удалить площадку</string>
+    <string name="hide_fragment">Скрыть площадку</string>
+    <string name="no_permission">В доступе отказано</string>
+    <string name="select_images">Выберите фотографии</string>
+    <string name="thank_you_field_created">Спасибо! Ваша заявка успешно создана, ожидайте подтверждения администратора.</string>
+    <string name="your_field_have_been_edited">Ваше поле было отредактировано.</string>
+    <string name="working_hours_not_added">Рабочие часы не были добавлены! Свяжитесь с администратором.</string>
+    <string name="phone_format">Неверный формат номера телефона!</string>
+    <string name="long_press_to_add">Выберите фотографии долгим нажатием</string>
+
+    <!-- Profile !-->
+    <string name="my_fields">Мои площадки</string>
+    <string name="fields_name">Название площадки</string>
+    <string name="status">Статус:</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="active_status">\u00A0активна</string>
+    <string name="hidden_status">\u00A0скрыта</string>
+    <string name="delete_field_msg">Вы действительно хотите удалить данную площадку?</string>
+    <string name="successfully_deleted">Успешно удалено!</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <!--<string name="login_success">Вы успешно авторизовались</string>-->
+    <string name="exit_really">Вы действительно хотите выйти из личного кабинета?</string>
+    <string name="cancel_book_really">Вы действительно хотите отменить бронь?</string>
+
+    <!--Booking fragment -->
+    <string name="to_book">Забронировать</string>
+    <string name="name">Имя</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="book_message">При создании брони вы будете автоматически зарегистрированы в сервисе</string>
+    <string name="date">Дата</string>
+    <string name="cancel">Отменить</string>
+    <string name="dd">ДД</string>
+    <string name="mm">ММ</string>
+    <string name="yy">2020</string>
+    <string name="book_popup">Спасибо! Ваша заявка успешно создана, ожидайте подтверждения владельца площадки.</string>
+    <string name="ok">ок</string>
+    <string name="parking_is_available">С собственной парковкой</string>
+    <string name="desired_date">Желаемая дата</string>
+    <string name="select_date">Выберите дату</string>
+    <string name="desired_time">Желаемое время</string>
+    <string name="desired_time_from">Желаемое время от</string>
+    <string name="desired_time_until">Желаемое время до</string>
+    <string name="_08_00">08:00</string>
+    <string name="_23_00">23:00</string>
+    <string name="till">До</string>
+    <string name="from">От</string>
+    <string name="rate">Оцените данное поле</string>
+    <string name="add_description">Добавьте отзыв</string>
+    <string name="description_added">Спасибо! Отзыв добавлен.</string>
+
+    <!-- Profile !-->
+    <string name="profile_message_to_login">Чтобы увидеть историю своих бронирований или добавить свою площадку,войдите или зарегистрируйтесь в приложение, используя номер телефона</string>
+    <string name="profile">Личный кабинет</string>
+    <string name="login">Войти</string>
+    <string name="field_should_be_filled">Поле должно быть заполнено</string>
+    <string name="number_format">Формат номера +996555555555</string>
+    <string name="invalid_phone_number">Такого номера не существует</string>
+    <string name="to_register">Зарегистрироваться</string>
+    <string name="need_to_login">Для того чтобы забронировать поле нужно войти в личный кабинет. Иначе бронь не будет действительной</string>
+    <string name="already_registered_user">Пользователь с таким номером телефона уже зарегистрирован в системе</string>
+    <string name="pole_kg">Pole.kg</string>
+    <string name="enter_user_name">Введите имя пользователя</string>
+    <string name="go_to_main">Вернуться на главную</string>
+    <string name="personal_info">Личные данные</string>
+    <string name="change">Изменить</string>
+    <string name="change_phone_number"><u>Сменить номер телефона</u></string>
+    <string name="stadium">Стадион "Спартак"</string>
+    <string name="leave_feedback">Оставить отзыв</string>
+    <string name="cancel_book">Отменить бронь</string>
+    <string name="requests">Запросы</string>
+    <string name="history_booking">История бронирований</string>
+    <string name="phone_number_input">+0123456789</string>
+    <string name="invalid_code">Неверный код</string>
+    <string name="authorization">Авторизация</string>
+    <string name="schedule">Расписание</string>
+    <string name="number_of_players_till">Количество игроков: до</string>
+    <string name="additional_details">Дополнительные характеристики</string>
+    <string name="did_not_defined">\u00A0Не указано</string>
+    <string name="field_sizes">Размеры поля:</string>
+    <string name="exit">Выйти</string>
+
+    <string name="number_of_players">Количество игроков:</string>
+    <string name="message_feedbacks_not_found">Отзывов нет</string>
+    <string name="login_message">Введите номер телефона чтобы войти в приложение</string>
+    <string name="blacklist">Черный список</string>
+    <string name="close">closed</string>
+    <string name="open">opened</string>
+    <string name="unblock">Разблокировать</string>
+    <string name="playground_r">Площадка:</string>
+    <string name="accept">Принять</string>
+    <string name="deny">Отказать</string>
+    <string name="confirm">Принять</string>
+    <string name="user_denied_message">Пользователь отменил заявку</string>
+    <string name="unblock_message">Пользователь сможет отправлять запросы на бронирование ваших площадок</string>
+    <string name="request_deny_message">Вы уверены, что хотите отказать в запросе на бронирование?</string>
+    <string name="add_to_blacklist">Внести пользователя в черный список</string>
+    <string name="delete_request">Удалить запрос</string>
+    <string name="delete_all_requests_from_user">Удалить все запросы от этого пользователя</string>
+    <string name="time_occupied">Выбранное время уже забронировано</string>
+    <string name="profile_message">Здесь будут отображаться ваши текущие брони</string>
+    <string name="blacklist_empty_message">В вашем черном списке нет пользователей</string>
+    <string name="no_new_requests">На данный момент новых запросов нет</string>
+    <string name="no_confirmed_requests">Подтвержденных запросов пока нет</string>
+    <string name="no_closed_requests">Отмененных запросов пока нет</string>
+    <string name="disable_booking">Отключить бронь</string>
+    <string name="book">Бронь</string>
+    <string name="book_opportunity">Возможность бронирования</string>
+    <string name="rate_field">Оцените площадку</string>
+    <string name="send">Отправить</string>
+    <string name="space">\u00A0</string>
+    <string name="fields_book">Справочник</string>
+
+
+</resources>

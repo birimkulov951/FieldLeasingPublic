@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "402741330749",
+    "firebase_url": "https://fieldleasing-c0db8.firebaseio.com",
+    "project_id": "fieldleasing-c0db8",
+    "storage_bucket": "fieldleasing-c0db8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402741330749:android:8a532d0680233e45877b54",
+        "android_client_info": {
+          "package_name": "fieldleas.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402741330749-j43m20l2svt15285a9pkalb6h4pk9764.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fieldleas.app",
+            "certificate_hash": "8242022f24f29071482d66aa18ea4da68dd9089c"
+          }
+        },
+        {
+          "client_id": "402741330749-rmvfeh4liicrmabj07uaijtgkq5jhqgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fieldleas.app",
+            "certificate_hash": "8c131137c57d27fb553d3518d3641a5be90e7ab0"
+          }
+        },
+        {
+          "client_id": "402741330749-ifv654du0g03ja8bb9mvrl51a4de84br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw3MzG6qeM5i8f74e8GsJKZnnx6JQfkJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402741330749-ifv654du0g03ja8bb9mvrl51a4de84br.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "402741330749-pr7orvgdab4ov3601ibbi1ocob1ovs4a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "islam.FootballFields"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

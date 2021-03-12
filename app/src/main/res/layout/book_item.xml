@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    android:layout_marginBottom="15dp"
+    android:background="@color/whiteToolbarAndCardViewColor"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="140dp">
+
+                 <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="1dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/book_item_playground_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/greenPrimary"
+                    android:src="@drawable/placeholder_image"/>
+
+                 </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/book_item_playground_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/blackColor1"
+                    android:textSize="18sp"
+                    android:text="@string/did_not_defined"/>
+
+                <TextView
+                    android:id="@+id/book_item_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/usual_text"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/did_not_defined"/>
+
+                <TextView
+                    android:id="@+id/book_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/usual_text"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/did_not_defined"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"
+                        android:layout_marginTop="10dp"
+                        style="@style/usual_text"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/space"
+                        android:layout_marginTop="10dp"
+                        style="@style/usual_text"/>
+
+                    <TextView
+                        android:id="@+id/book_item_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" XXXXX"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/greenPrimary"
+                        style="@style/usual_text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/book_item_cancel_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_book"
+            android:textAllCaps="false"
+            android:textColor="@color/greenPrimary"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_stroke_green"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

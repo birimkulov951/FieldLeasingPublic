@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playgroundListFragment">
+
+    <fragment
+        android:id="@+id/playgroundListFragment"
+        android:name="fieldleas.app.ui.main.FieldsFragment"
+        android:label="Футбольные площадки"
+        tools:layout="@layout/fragment_fields" >
+
+        <action
+            android:id="@+id/action_playgroundListFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+
+        <action
+            android:id="@+id/action_playgroundListFragment_to_filterSettingsFragment"
+            app:destination="@id/filterSettingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_playgroundListFragment_to_addStadiumFragment"
+            app:destination="@id/addFieldFragment" />
+        <action
+            android:id="@+id/action_playgroundListFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_playgroundListFragment_to_myFieldsFragment"
+            app:destination="@id/myFieldsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="fieldleas.app.ui.main.NewsFragment"
+        android:label="Новости"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="fieldleas.app.ui.main.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" >
+        <action
+            android:id="@+id/action_newsDetailsFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/filterSettingsFragment"
+        android:name="fieldleas.app.ui.main.FilterSettingsFragment"
+        android:label="fragment_filter_settings"
+        tools:layout="@layout/fragment_filter_settings" >
+        <action
+            android:id="@+id/action_filterSettingsFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileNotRegisteredUsers"
+        android:name="fieldleas.app.ui.main.profile.ProfileNotRegisteredUsers"
+        android:label="fragment_profile_not_registered_users"
+        tools:layout="@layout/fragment_profile_not_registered_users" >
+        <action
+            android:id="@+id/action_profileNotRegisteredUsers_to_playgroundOwnerProfileFragment"
+            app:destination="@id/playgroundOwnerProfileFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/playgroundListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileNotRegisteredUsers_to_registrationMainFragment"
+            app:destination="@id/registrationMainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_profileNotRegisteredUsers_to_authorizationFragment2"
+            app:destination="@id/authorizationFragment2"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_profileNotRegisteredUsers_to_justUserProfileFragment"
+            app:destination="@id/justUserProfileFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/playgroundListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/justUserProfileFragment"
+        android:name="fieldleas.app.ui.main.profile.JustUserProfileFragment"
+        android:label="fragment_just_user_profile"
+        tools:layout="@layout/fragment_just_user_profile" >
+        <action
+            android:id="@+id/action_justUserProfileFragment_to_personalInformationFragment"
+            app:destination="@id/personalInformationFragment" />
+        <action
+            android:id="@+id/action_justUserProfileFragment_to_historyBookingFragment"
+            app:destination="@id/historyBookingFragment" />
+        <action
+            android:id="@+id/action_justUserProfileFragment_self"
+            app:destination="@id/justUserProfileFragment" />
+        <action
+            android:id="@+id/action_justUserProfileFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+        <action
+            android:id="@+id/action_justUserProfileFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="fieldleas.app.ui.main.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager">
+        <action0
+            android:id="@+id/action_viewPagerFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_bookingFragment2"
+            app:destination="@id/bookingFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addFieldFragment"
+        android:name="fieldleas.app.ui.main.profile.AddFieldFragment"
+        android:label="fragment_add_field"
+        tools:layout="@layout/fragment_add_field" >
+        <action
+            android:id="@+id/action_addFieldFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment2"
+        android:name="fieldleas.app.ui.main.BookingFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" >
+        <action
+            android:id="@+id/action_bookingFragment2_to_fieldDetailsFragment"
+            app:destination="@id/fieldDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_bookingFragment2_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_bookingFragment2_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+        <action
+            android:id="@+id/action_bookingFragment2_to_profileNotRegisteredUsers"
+            app:destination="@id/profileNotRegisteredUsers"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/playgroundListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldDetailsFragment"
+        android:name="fieldleas.app.ui.main.FieldDetailsFragment"
+        android:label="fragment_field_details"
+        tools:layout="@layout/fragment_field_details" >
+
+        <action
+            android:id="@+id/action_fieldDetailsFragment_to_bookingFragment2"
+            app:destination="@id/bookingFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/playgroundOwnerProfileFragment"
+        android:name="fieldleas.app.ui.main.profile.PlaygroundOwnerProfileFragment"
+        android:label="PlaygroundOwnerProfileFragment" >
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_personalInformationFragment"
+            app:destination="@id/personalInformationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_addFieldFragment"
+            app:destination="@id/addFieldFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_historyBookingFragment"
+            app:destination="@id/historyBookingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_blackListFragment"
+            app:destination="@id/blackListFragment" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_requestsFragment"
+            app:destination="@id/requestsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_myFieldsFragment"
+            app:destination="@id/myFieldsFragment" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment" />
+        <action
+            android:id="@+id/action_playgroundOwnerProfileFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="fieldleas.app.ui.main.profile.PersonalInformationFragment"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" />
+    <fragment
+        android:id="@+id/authorizationFragment2"
+        android:name="fieldleas.app.ui.authorization.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment2_to_authorizationConfirmAccountFragment"
+            app:destination="@id/authorizationConfirmAccountFragment"
+            app:popUpTo="@id/profileNotRegisteredUsers"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_authorizationFragment2_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/profileNotRegisteredUsers" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationMainFragment"
+        android:name="fieldleas.app.ui.authorization.register.RegistrationMainFragment"
+        android:label="fragment_registration_main"
+        tools:layout="@layout/fragment_registration_main" >
+        <action
+            android:id="@+id/action_registrationMainFragment_to_inputPhoneNumberFragment"
+            app:destination="@id/inputPhoneNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_registrationMainFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/playgroundListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorizationConfirmAccountFragment"
+        android:name="fieldleas.app.ui.authorization.AuthorizationConfirmAccountFragment"
+        android:label="AuthorizationConfirmAccountFragment">
+        <action
+            android:id="@+id/action_authorizationConfirmAccountFragment_to_profileNotRegisteredUsers"
+            app:destination="@id/profileNotRegisteredUsers"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/playgroundListFragment" />
+        <action
+            android:id="@+id/action_authorizationConfirmAccountFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/playgroundListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmAccountFragment"
+        android:name="fieldleas.app.ui.authorization.register.ConfirmAccountFragment"
+        android:label="fragment_authorization_confirm_account"
+        tools:layout="@layout/fragment_authorization_confirm_account" >
+        <action
+            android:id="@+id/action_confirmAccountFragment_to_enterUserNameFragment"
+            app:destination="@id/enterUserNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/profileNotRegisteredUsers" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputPhoneNumberFragment"
+        android:name="fieldleas.app.ui.authorization.register.InputPhoneNumberFragment"
+        android:label="fragment_input_phone_number"
+        tools:layout="@layout/fragment_input_phone_number" >
+        <action
+            android:id="@+id/action_inputPhoneNumberFragment_to_confirmAccountFragment"
+            app:destination="@id/confirmAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_inputPhoneNumberFragment_to_playgroundListFragment"
+            app:destination="@id/playgroundListFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/profileNotRegisteredUsers"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterUserNameFragment"
+        android:name="fieldleas.app.ui.authorization.register.EnterUserNameFragment"
+        android:label="fragment_registration_enter_user_name"
+        tools:layout="@layout/fragment_registration_enter_user_name"
+      >
+        <action
+            android:id="@+id/action_enterUserNameFragment_to_profileNotRegisteredUsers"
+            app:destination="@id/profileNotRegisteredUsers"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/playgroundListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyBookingFragment"
+        android:name="fieldleas.app.ui.main.profile.HistoryBookingFragment"
+        android:label="fragment_history_bookings"
+        tools:layout="@layout/fragment_history_bookings" />
+    <fragment
+        android:id="@+id/blackListFragment"
+        android:name="fieldleas.app.ui.main.profile.BlackListFragment"
+        android:label="fragment_blacklist"
+        tools:layout="@layout/fragment_blacklist"
+        />
+    <fragment
+        android:id="@+id/requestsFragment"
+        android:name="fieldleas.app.ui.main.profile.requests.RequestsFragment"
+        android:label="fragment_requests_view_pager"
+        tools:layout="@layout/fragment_requests_view_pager" />
+    <fragment
+        android:id="@+id/myFieldsFragment"
+        android:name="fieldleas.app.ui.main.profile.MyFieldsFragment"
+        android:label="fragment_my_fields"
+        tools:layout="@layout/fragment_my_fields" >
+        <action
+            android:id="@+id/action_myFieldsFragment_to_addFieldFragment"
+            app:destination="@id/addFieldFragment" />
+    </fragment>
+</navigation>

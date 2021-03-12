@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.authorization.AuthorizationFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/whiteToolbarAndCardViewColor"
+        android:elevation="3dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="@string/pole_kg"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="24sp"
+            android:textColor="@color/greenPrimary"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp">
+        <TextView
+            android:id="@+id/txt_header"
+            style="@style/the_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_above="@id/enter_number_tv"
+            android:text="@string/authorization" />
+        <TextView
+            android:id="@+id/enter_number_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_above="@id/authorization_inputPhoneNumber"
+            android:text="Введите номер телефона, чтобы войти в приложение"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular"
+          />
+
+        <EditText
+            android:id="@+id/authorization_inputPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_stroke_grey"
+            android:hint="+996"
+            android:imeOptions="actionGo"
+            android:maxLength="13"
+            android:digits="@string/phone_number_input"
+            style="@style/usual_text"
+            android:inputType="phone"
+            android:padding="16dp" />
+
+
+
+        <Button
+            android:id="@+id/authorization_btn_sendCode"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/authorization_inputPhoneNumber"
+            android:background="@drawable/background_rectangle_grey"
+            android:text="Отправить код"
+            android:padding="16dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/authorization_tv_goToMain"
+            style="@style/usual_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/txt_bottomText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>
